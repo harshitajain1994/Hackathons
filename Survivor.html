@@ -1,0 +1,295 @@
+<html>
+    <head>
+        <title>Sign Up</title>
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
+        <script src="js/modernizr.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+
+        <style>
+            @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500);
+            
+
+            .panel {
+              border-radius: 5px;
+            }
+            label {
+              font-weight: 300;
+            }
+            .panel-login {
+               border: none;
+              -webkit-box-shadow: 0px 0px 49px 14px rgba(188,190,194,0.39);
+              -moz-box-shadow: 0px 0px 49px 14px rgba(188,190,194,0.39);
+              box-shadow: 0px 0px 49px 14px rgba(188,190,194,0.39);
+              }
+            .panel-login .checkbox input[type=checkbox]{
+              margin-left: 0px;
+            }
+            .panel-login .checkbox label {
+              padding-left: 25px;
+              font-weight: 300;
+              display: inline-block;
+              position: relative;
+            }
+            .panel-login .checkbox {
+             padding-left: 20px;
+            }
+            .panel-login .checkbox label::before {
+              content: "";
+              display: inline-block;
+              position: absolute;
+              width: 17px;
+              height: 17px;
+              left: 0;
+              margin-left: 0px;
+              border: 1px solid #cccccc;
+              border-radius: 3px;
+              background-color: #fff;
+              -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+              -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+              transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+            }
+            .panel-login .checkbox label::after {
+              display: inline-block;
+              position: absolute;
+              width: 16px;
+              height: 16px;
+              left: 0;
+              top: 0;
+              margin-left: 0px;
+              padding-left: 3px;
+              padding-top: 1px;
+              font-size: 11px;
+              color: #555555;
+            }
+            .panel-login .checkbox input[type="checkbox"] {
+              opacity: 0;
+            }
+            .panel-login .checkbox input[type="checkbox"]:focus + label::before {
+              outline: thin dotted;
+              outline: 5px auto -webkit-focus-ring-color;
+              outline-offset: -2px;
+            }
+            .panel-login .checkbox input[type="checkbox"]:checked + label::after {
+              font-family: 'FontAwesome';
+              content: "\f00c";
+            }
+            .panel-login>.panel-heading .tabs{
+              padding: 0;
+            }
+            .panel-login h2{
+              font-size: 20px;
+              font-weight: 300;
+              margin: 30px;
+            }
+            .panel-login>.panel-heading {
+              color: #848c9d;
+              background-color: #e8e9ec;
+              border-color: #fff;
+              text-align:center;
+              border-bottom-left-radius: 5px;
+              border-bottom-right-radius: 5px;
+              border-top-left-radius: 0px;
+              border-top-right-radius: 0px;
+              border-bottom: 0px;
+              padding: 0px 15px;
+            }
+            .panel-login .form-group {
+              padding: 0 30px;
+            }
+            .panel-login>.panel-heading .login {
+              padding: 20px 30px;
+              border-bottom-leftt-radius: 5px;
+            }
+            .panel-login>.panel-heading .register {
+              padding: 20px 30px;
+              background: #2d3b55;
+              border-bottom-right-radius: 5px;
+            }
+            .panel-login>.panel-heading a{
+              text-decoration: none;
+              color: #666;
+              font-weight: 300;
+              font-size: 16px;
+              -webkit-transition: all 0.1s linear;
+              -moz-transition: all 0.1s linear;
+              transition: all 0.1s linear;
+            }
+            .panel-login>.panel-heading a#register-form-link {
+              color: #fff;
+              width: 100%;
+              text-align: right;
+            }
+            .panel-login>.panel-heading a#login-form-link {
+              width: 100%;
+              text-align: left;
+            }
+
+            .panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
+              height: 45px;
+              border: 0;
+              font-size: 16px;
+              -webkit-transition: all 0.1s linear;
+              -moz-transition: all 0.1s linear;
+              transition: all 0.1s linear;
+              -webkit-box-shadow: none;
+              box-shadow: none;
+              border-bottom: 1px solid #e7e7e7;
+              border-radius: 0px;
+              padding: 6px 0px;
+            }
+            .panel-login input:hover,
+            .panel-login input:focus {
+              outline:none;
+              -webkit-box-shadow: none;
+              -moz-box-shadow: none;
+              box-shadow: none;
+              border-color: #ccc;
+            }
+            .btn-login {
+              background-color: #E8E9EC;
+              outline: none;
+              color: #2D3B55;
+              font-size: 14px;
+              height: auto;
+              font-weight: normal;
+              padding: 14px 0;
+              text-transform: uppercase;
+              border: none;
+              border-radius: 0px;
+              box-shadow: none;
+            }
+            .btn-login:hover,
+            .btn-login:focus {
+              color: #fff;
+              background-color: #2D3B55;
+            }
+            .forgot-password {
+              text-decoration: underline;
+              color: #888;
+            }
+            .forgot-password:hover,
+            .forgot-password:focus {
+              text-decoration: underline;
+              color: #666;
+            }
+
+            .btn-register {
+              background-color: #E8E9EC;
+              outline: none;
+              color: #2D3B55;
+              font-size: 14px;
+              height: auto;
+              font-weight: normal;
+              padding: 14px 0;
+              text-transform: uppercase;
+              border: none;
+              border-radius: 0px;
+              box-shadow: none;
+            }
+            .btn-register:hover,
+            .btn-register:focus {
+              color: #fff;
+              background-color: #2D3B55;
+            }
+
+        </style>
+    </head>
+    <body>
+       <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        
+        <div class="container">
+            <br /><br />
+           <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <div class="panel panel-login">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <form id="register-form" action="#" method="post" role="form" style="">
+                        <h2>Update Profile</h2>
+                          <div class="form-group">
+                            <input type="text" name="age" id="age" tabindex="1" class="form-control" placeholder="Your Age" value="">
+                          </div>
+                          
+                          <div class="form-group">
+                            <input type="text" name="cancertype" id="cancertype" tabindex="2" class="form-control" placeholder="What is the type of cancer" value="">
+                          </div>
+                          <div class="form-group">
+                            <input type="text" name="diagnosed_age" id="diagnosed_age" tabindex="2" class="form-control" placeholder="What age are you diagnosed with cancer" value="">
+                          </div>
+                          <div class="form-group">
+                              <label> Select the treatments that you have undergone</label>
+                              <div class="checkbox">
+                              <label><input type="checkbox" value="">Surgery</label>
+                            </div>
+                            <div class="checkbox">
+                              <label><input type="checkbox" value="">Radiation Therapy</label>
+                            </div>
+                            <div class="checkbox disabled">
+                              <label><input type="checkbox" value=""> Chemotherapy</label>
+                            </div>
+
+                              
+                              <div class="checkbox">
+                              <label><input type="checkbox" value="">Immunotherapy</label>
+                            </div>
+                            <div class="checkbox">
+                              <label><input type="checkbox" value="">Targeted Therapy</label>
+                            </div>
+                            <div class="checkbox disabled">
+                              <label><input type="checkbox" value="">Stem Cell Therapy</label>
+                            </div>
+                        </div>
+                          <div class="form-group">
+                            <input type="text" name="time_medicines" id="time_medicines" tabindex="1" class="form-control" placeholder="How much time the treatment took (in years) " value="">
+                          </div>
+                          
+                          <div class="row">
+                              <div class="col-sm-6 col-md-6 col-xs-6">
+                          
+                          <div class="form-group">
+                            <input style="max-width:100%" type="textarea" data-role="tagsinput" name="side_effects" id="side_effects" tabindex="1"  placeholder="What are the side effects" value="">
+                          </div>
+                              </div>
+                              <div class="col-sm-6 col-md-6 col-xs-6">
+                          <div class="form-group">
+                              
+                            <input type="textarea" data-role="tagsinput" name="symptoms" id="symptoms" tabindex="1"  placeholder="What were your Symptoms" value="">
+                          </div>
+                          </div>
+                          </div>
+                          
+                          
+                          
+                          <div class="form-group">
+                            <input type="textarea" name="legacy" id="legacy" tabindex="1" class="form-control" style="height: 60px;" placeholder="Tell other cancer fighters your inspirational story" value="">
+                          </div>
+                          
+                          <div class="form-group">
+                            <div class="row">
+                              <div class="col-sm-6 col-sm-offset-3">
+                                <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Save">
+                              </div>
+                            </div>
+                          </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+        <script src="js/jquery-2.1.1.js"></script>
+        <script src="js/smoothscroll.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
