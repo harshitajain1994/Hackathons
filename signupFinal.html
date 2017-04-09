@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Registration Form</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/dcalendar.picker.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+    <script src="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+
+<style type="text/css">
+#deceased{
+    background-color:#FFF3F5;
+	padding-top:10px;
+	margin-bottom:10px;
+}
+.remove_field{
+	float:right;
+	cursor:pointer;
+	position : absolute;
+}
+.remove_field:hover{
+	text-decoration:none;
+}
+</style>
+
+	<script src="js/jquery-1.12.4.js"></script>
+	<script src="js/dcalendar.picker.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<script type='text/javascript'>
+  document.getElementById('form1').addEventListener('keypress', function(event) {
+  if (event.keyCode == 13) {
+  event.preventDefault();
+  }
+  });
+	</script>
+  </head>
+  <body>
+<div class="panel panel-primary" style="margin:20px;">
+	<div class="panel-heading">
+        	<h3 class="panel-title">Registration Form</h3>
+	</div>
+<div class="panel-body">
+    <form name="form1">
+<div class="col-md-12 col-sm-12">
+	<div class="form-group col-md-6 col-sm-6">
+            <label for="name">First Name*	</label>
+            <input type="text" class="form-control input-sm" name="firstname" placeholder="">
+        </div>
+        <div class="form-group col-md-6 col-sm-6">
+                  <label for="name">Last Name*	</label>
+                  <input type="text" class="form-control input-sm" name="lastname" placeholder="">
+              </div>
+        <div class="form-group col-md-6 col-sm-6">
+            <label for="email">Email*</label>
+            <input type="email" class="form-control input-sm" name="email" placeholder="">
+        </div>
+
+        <div class="form-group col-md-6 col-sm-6">
+            <label for="mobile">Age*</label>
+            <input type="text" class="form-control input-sm" name="mobile" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <div style="font-size:16px; color:#444" class="row" name="gender">
+
+                <div class="col-sm-3 col-md-2 col-xs-3">
+                  <br>
+                  <input type="radio" name="role" name="male" value="male" >
+                    <label for="role">Male</label>
+                </div>
+                <div class="col-sm-3 col-md-2 col-xs-3">
+                  <br>
+                <input type="radio" name="role" name="female" value="female">
+                    <label for="role">Female</label>
+                </div>
+            </div>
+          </div>
+
+	<div class="form-group col-md-6 col-sm-6">
+            <label for="city">Country*</label>
+            <input type="text" class="form-control input-sm" name="city" placeholder="">
+        </div>
+
+	<div class="form-group col-md-6 col-sm-6">
+            <label for="state">State*</label>
+            <input type="text" class="form-control input-sm" name="state" placeholder="">
+        </div>
+
+	<div class="form-group col-md-6 col-sm-6">
+            <label for="country">City*</label>
+            <input type="text" class="form-control input-sm" name="country" placeholder="">
+        </div>
+
+	<div class="form-group col-md-6 col-sm-6">
+            <label for="pincode">Occupation</label>
+            <input type="text" class="form-control input-sm" name="pincode" placeholder="">
+        </div>
+
+        <div class="form-group col-md-6 col-sm-6">
+                  <label for="pincode">Primary Language</label>
+                  <input type="text" class="form-control input-sm" name="language" placeholder="">
+              </div>
+
+	<div class = "form-group col-md-6 col-sm-6">
+	      <label for="years">Status</label>
+	      <select class="form-control input-sm" name="years">
+		<option>-- Select Category --</option>
+		<option>Unmarried</option>
+		<option>Married</option>
+		<option>Divorced</option>
+		<option>Single Parent</option>
+	      </select>
+	</div>
+
+  <div class="form-group">
+      <div style="font-size:16px; color:#444" class="row">
+
+          <div class="col-sm-3 col-md-2 col-xs-3">
+            <br>
+            <input type="radio" name="role" value="male" >
+              <label for="role">Survivor</label>
+          </div>
+          <div class="col-sm-3 col-md-2 col-xs-3">
+            <br>
+          <input type="radio" name="role"  value="female">
+              <label for="role">Patient</label>
+          </div>
+      </div>
+    </div>
+
+  <div class="form-group col-md-6 col-sm-6"  >
+    <label for="symptoms_patients">Symptoms</label><br>
+     <input type="textarea" data-role="tagsinput" name="symptoms" name="symptoms_patients" tabindex="1"  placeholder="Your Symptoms" value="" style=" width: 100%; height:100px">
+   </div>
+   <div class="form-group col-md-6 col-sm-6"  >
+     <label for="symptoms_patients">Side Effects</label><br>
+      <input type="textarea" data-role="tagsinput" name="symptoms" name="side_effects" tabindex="1"  placeholder="Side Effects faced" value="" style=" width: 100%; height:100px">
+    </div>
+
+   <div class="form-group col-md-6 col-sm-6">
+        <label for="sel1">Type of Cancer</label>
+        <select class="form-control" name="cancertype">
+            <option>Breast Cancer</option>
+            <option>Kidney cancer</option>
+            <option>Leukemia</option>
+            <option>Lung Cancer</option>
+            <option>Lymphoma</option>
+            <option>Pancreatic cancer</option>
+            <option>Prostate cancer</option>
+            <option>Uterine cancer</option>
+        </select>
+      </div><br>
+      <div class="form-group col-md-6 col-sm-6"   >
+        <label for="sel1">Sub-type of Cancer</label>
+        <select class="form-control" name="cancersubtype">
+            <option>Lung Cancer</option>
+            <option>Small Cell Lung Cancer</option>
+            <option>Non-Small Cell Lung Cancer</option>
+            <option>Pleomorphic Carcinoma (Non-Small Cell Lung Cancer)</option>
+            <option>Adenosquamous Carcinoma (Non-Small Cell Lung Cancer)</option>
+            <option>Unclassified Carcinoma (Non-Small Cell Lung Cancer)r</option>
+            <option>Salivary Gland-Like-Carcinoma (Non-Small Cell Lung Cancer)</option>
+            <option>Small Cell Carcinoma (Small Cell Lung Cancer)</option>
+            <option>Adenocarcinoma (Non-Small Cell Lung Cancer)</option>
+            <option>Combined-Small Cell Carcinoma (Small Cell Lung Cancer)</option>
+            <option>Large Cell Neuroendocrine Carcinoma (Non-Small Cell Lung Cancer)</option>
+            <option>Squamous Cell Carcinoma (Non-Small Cell Lung Cancer)</option>
+            <option>Large Cell Carcinoma (Non-Small Cell Lung Cancer)</option>
+            <option>Lung Metastasis</option>
+            <option>Endometrial Cancer</option>
+        </select>
+      </div><br>
+      <div class="form-group">
+          <label> Select the treatments that you have undergone</label><br>
+          <div class="checkbox col-md-6 col-sm-6">
+          <label><input type="checkbox" value="" name="surgery">Surgery</label>
+        </div>
+        <div class="checkbox col-md-6 col-sm-6">
+          <label><input type="checkbox" value="" name="radiation_therapy">Radiation Therapy</label>
+        </div>
+        <div class="checkbox  col-md-6 col-sm-6">
+          <label><input type="checkbox" value="" name="chemo_therapy"> Chemotherapy</label>
+        </div>
+          <div class="checkbox col-md-6 col-sm-6">
+          <label><input type="checkbox" value="" name="immunotherapy">Immunotherapy</label>
+        </div>
+        <div class="checkbox col-md-6 col-sm-6">
+          <label><input type="checkbox" value="" name="targeted_therapy">Targeted Therapy</label>
+        </div>
+        <div class="checkbox col-md-6 col-sm-6">
+          <label><input type="checkbox" value="" name="stem_cell_therapy">Stem Cell Therapy</label>
+        </div>
+    </div>
+
+
+<div class="col-md-12 col-sm-12">
+	<div class="form-group col-md-3 col-sm-3 pull-right" >
+			<input type="submit" class="btn btn-primary" value="Submit" name="submitButton"/>
+	</div>
+</div>
+</form>
+</div>
+</body>
+</html>
