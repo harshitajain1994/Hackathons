@@ -1,0 +1,206 @@
+ <!DOCTYPE html>
+  <html ng-app="myApp">
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+      <!--Import materialize.css-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+        <link rel="stylesheet" href="nouislider.css" >
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            console.log(ev.target);
+                console.log(ev.target.innerHTML.length);
+                ev.target.appendChild(document.getElementById(data));
+                console.log("Moved the image");
+            console.log(ev.target.innerHTML);
+            
+        }
+        </script>
+    </head>
+
+    <body ng-controller="myCntl">
+        <div class="row">
+            <div class="col s2">
+                <br />
+                Please Enter your preferences you wish to filter.
+                <br />
+                <br />
+                <br />
+                <div class="row">
+                    <div style="position: relative; top: 50%;transform: translateY(-50%);" class="col s3">
+                        Age
+                    </div>
+                    <div class="col s9">
+                    <div id="age_slider"></div>
+                    </div>
+                    <div class="input-field col s12">
+                          <input id="cancertype" type="text" class="validate">
+                            <label for="cancertype">Cancer type</label>
+                    </div>
+                    <div class="input-field col s12">
+                          <input id="cancersubtype" type="text" class="validate">
+                            <label for="cancersubtype">Cancer Subtype</label>
+                    </div>
+                    <div class="input-field col s12">
+                          <input id="treatments" type="text" class="validate">
+                            <label for="treatments">Treatment</label>
+                    </div>
+                    <div class="input-field col s12">
+                          <input id="location" type="text" class="validate">
+                            <label for="location">Location(City, State, Country)</label>
+                    </div>
+                    
+                    <div class="input-field col s12">
+                          <input id="language" type="text" class="validate">
+                            <label for="language">Language</label>
+                    </div>
+                    <div class="input-field col s12">
+                          <input id="status" type="text" class="validate">
+                            <label for="status">Martial Status</label>
+                    </div>
+    
+                    <div class="input-field col s12">
+                            Phase<br />
+                          <input name="group1" id="group1_in" type="radio"  />
+                          <label for="group1_in">In Treatment</label>
+                          <input name="group1" id="group1_post" type="radio"/>
+                          <label for="group1_post">Post Treatment</label>
+                    </div>
+                    <div class="input-field col s12">
+                          <input id="occupation" type="text" class="validate">
+                            <label for="occupation">Occupation</label>
+                    </div>
+                    
+                    <div class="input-field col s12">
+                          <input name="group2" id="group2_male" type="radio" />
+                          <label for="group2_male">Male</label>
+                          <input name="group2" id="group2_female" type="radio" />
+                          <label for="group2_female">Female</label>
+                    </div>
+                    
+                    
+                </div>
+                
+                
+                
+                
+                
+                
+                
+            </div>
+            <div class="col s8">
+                
+                
+                <div class="row" >
+                    <div class="col s3" ng-repeat="x in data">
+                        <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light"><center>
+                            <img class="activator" style="width:150px; height:150px;" src={{x.profile_pic}}></center>
+                        </div>
+                        <div class="card-content">
+                          <span class="card-title activator grey-text text-darken-4">{{x.firstname}} {{x.lastname}}</span>
+                          <p><a href={{x.profilepage}}>Visit profile</a></p>
+                        </div>
+                        <div class="card-reveal">
+                          <span class="card-title grey-text text-darken-4">{{x.firstname}}  {{x.lastname}}<i class="material-icons right">close</i></span>
+                          <p>{{x.age}}</p>
+                            <p>{{x.gender}}</p>
+                            <p><span class="flow-text">Occupation :</span> {{x.occupation}}</p>
+                            <p>Check out the full profile at <a href={{x.profile_page}}>here</a></p>
+                        </div>
+                      </div>    
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                
+            </div>
+            
+            <div class="col s2">
+                Please Choose the preferences
+                <div id="div0" style="text-align: center;width: 100%;height: 50px;padding: 10px; border: 1px solid #aaaaaa;" ondrop="drop(event)" ondragover="allowDrop(event)">1.</div>
+                <div id="div1" style="text-align: center;width: 100%;height: 50px;padding: 10px; border: 1px solid #aaaaaa;" ondrop="drop(event)" ondragover="allowDrop(event)">2.</div>
+                <div id="div2" style="text-align: center;width: 100%;height: 50px;padding: 10px; border: 1px solid #aaaaaa;" ondrop="drop(event)" ondragover="allowDrop(event)">3.</div>
+                <div id="div3" style="text-align: center;width: 100%;height: 50px;padding: 10px; border: 1px solid #aaaaaa;" ondrop="drop(event)" ondragover="allowDrop(event)">4.</div>
+                <div id="div4" style="text-align: center;width: 100%;height: 50px;padding: 10px; border: 1px solid #aaaaaa;" ondrop="drop(event)" ondragover="allowDrop(event)">5.</div>
+                <div id="div5" style="text-align: center;width: 100%;height: 50px;padding: 10px; border: 1px solid #aaaaaa;" ondrop="drop(event)" ondragover="allowDrop(event)">6.</div>
+                <div id="div6" style="text-align: center;width: 100%;height: 50px;padding: 10px; border: 1px solid #aaaaaa;" ondrop="drop(event)" ondragover="allowDrop(event)">7.</div>
+                <div id="div7" style="text-align: center;width: 100%;height: 50px;padding: 10px; border: 1px solid #aaaaaa;" ondrop="drop(event)" ondragover="allowDrop(event)">8.</div>
+                <div id="div8" style="text-align: center;width: 100%;height: 50px;padding: 10px; border: 1px solid #aaaaaa;" ondrop="drop(event)" ondragover="allowDrop(event)">9.</div>
+                <div id="div9" style="text-align: center;width: 100%;height: 50px;padding: 10px; border: 1px solid #aaaaaa;" ondrop="drop(event)" ondragover="allowDrop(event)">10.</div>
+                
+                <p>Drag and Drop tags to change the preferences.</p>
+                
+                <div id="div11" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <image id="0" draggable="true" ondragstart="drag(event)" src="button_treatment.jpg"></image>
+                    <image id="1" draggable="true" ondragstart="drag(event)" src="button_age.jpg"></image>
+                    <image id="2" draggable="true" ondragstart="drag(event)" src="button_cancer-subtype.jpg"></image>
+                    <image id="3" draggable="true" ondragstart="drag(event)" src="button_cancer-type.jpg"></image>
+                    <image id="4" draggable="true" ondragstart="drag(event)" src="button_gender.jpg"></image>
+                    <image id="5" draggable="true" ondragstart="drag(event)" src="button_language.jpg"></image>
+                    <image id="6" draggable="true" ondragstart="drag(event)" src="button_location.jpg"></image>
+                    <image id="7" draggable="true" ondragstart="drag(event)" src="button_status.jpg"></image>
+                    <image id="8" draggable="true" ondragstart="drag(event)" src="button_occupation.jpg"></image>
+                    <image id="9" draggable="true" ondragstart="drag(event)" src="button_phase.jpg"></image>
+                </div>
+                
+                <a class="waves-effect waves-light btn" ng-click="update()">Update preferences</a>
+                    
+                
+            </div>
+            
+        </div>
+        
+      <!--Import jQuery before materialize.js-->
+          <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+              <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+        <script src="nouislider.min.js"></script>
+        <script src="custom.js"></script>
+        
+        <script>
+        var slider = document.getElementById('age_slider');
+          noUiSlider.create(slider, {
+           start: [20, 80],
+           connect: true,
+           step: 1,
+           range: {
+             'min': 0,
+             'max': 100
+           },
+           format: wNumb({
+             decimals: 0
+           })
+          });
+      </script>
+        <!--<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/58ea0bb2f7bbaa72709c5398/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>-->
+      
+          
+      </body>
+</html>
