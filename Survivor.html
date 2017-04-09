@@ -211,38 +211,87 @@
                 <div class="panel-body">
                   <div class="row">
                     <div class="col-lg-12">
-                      <form id="register-form" action="#" method="post" role="form" style="">
+                      <form id="register-form" action="#" method="get" role="form" style="">
                         <h2>Update Profile</h2>
                           <div class="form-group">
                             <input type="text" name="age" id="age" tabindex="1" class="form-control" placeholder="Your Age" value="">
                           </div>
                           
                           <div class="form-group">
-                            <input type="text" name="cancertype" id="cancertype" tabindex="2" class="form-control" placeholder="What is the type of cancer" value="">
+                            <label class="radio-inline"><input type="radio" name="gender" value="male">Male</label>
+                            <label class="radio-inline"><input type="radio" name="gender" value="female">Female</label>
                           </div>
+                          
+                          <div class="form-group">
+                            <input type="text" name="occupation" id="occupation" tabindex="2" class="form-control" placeholder="What is your occupation" value="">
+                          </div>
+                          
+                          <div class="form-group">
+                            <label for="gender">Does any of your parents or ancestors has been diagnosed with cancer?</label>
+                            <label class="radio-inline"><input type="radio" name="genetical" value="yes">Yes</label>
+                            <label class="radio-inline"><input type="radio" name="genetical" value="no">No</label>
+                          </div>
+                          
+                          
+                            <div class="form-group">
+                              <label for="sel1">Type of Cancer</label>
+                              <select class="form-control" id="cancertype">
+                                  <option>Breast Cancer</option>
+                                  <option>Kidney cancer</option>
+                                  <option>Leukemia</option>
+                                  <option>Lung Cancer</option>
+                                  <option>Lymphoma</option>
+                                  <option>Pancreatic cancer</option>
+                                  <option>Prostate cancer</option>
+                                  <option>Uterine cancer</option>
+                              </select>
+                            </div>
+                          
+                            <div class="form-group">
+                              <label for="sel1">Sub-type of Cancer</label>
+                              <select class="form-control" id="cancertype">
+                                  <option>Lung Cancer</option>
+                                  <option>Small Cell Lung Cancer</option>
+                                  <option>Non-Small Cell Lung Cancer</option>
+                                  <option>Pleomorphic Carcinoma (Non-Small Cell Lung Cancer)</option>
+                                  <option>Adenosquamous Carcinoma (Non-Small Cell Lung Cancer)</option>
+                                  <option>Unclassified Carcinoma (Non-Small Cell Lung Cancer)r</option>
+                                  <option>Salivary Gland-Like-Carcinoma (Non-Small Cell Lung Cancer)</option>
+                                  <option>Small Cell Carcinoma (Small Cell Lung Cancer)</option>
+                                  <option>Adenocarcinoma (Non-Small Cell Lung Cancer)</option>
+                                  <option>Combined-Small Cell Carcinoma (Small Cell Lung Cancer)</option>
+                                  <option>Large Cell Neuroendocrine Carcinoma (Non-Small Cell Lung Cancer)</option>
+                                  <option>Squamous Cell Carcinoma (Non-Small Cell Lung Cancer)</option>
+                                  <option>Large Cell Carcinoma (Non-Small Cell Lung Cancer)</option>
+                                  <option>Lung Metastasis</option>
+                                  <option>Endometrial Cancer</option>
+                              </select>
+                            </div>                          
+                          
                           <div class="form-group">
                             <input type="text" name="diagnosed_age" id="diagnosed_age" tabindex="2" class="form-control" placeholder="What age are you diagnosed with cancer" value="">
                           </div>
                           <div class="form-group">
                               <label> Select the treatments that you have undergone</label>
-                              <div class="checkbox">
-                              <label><input name="surgery" type="checkbox" value="">Surgery</label>
+                              
+                              <div class="">
+                              <label><input name="surgery" type="checkbox" value="" checked />Surgery</label>
                             </div>
-                            <div class="checkbox">
+                            <div class="">
                               <label><input name="radiation_therapy" type="checkbox" value="">Radiation Therapy</label>
                             </div>
-                            <div class="checkbox">
+                            <div class="">
                               <label><input name="chemo_therapy" type="checkbox" value=""> Chemotherapy</label>
                             </div>
 
                               
-                              <div class="checkbox">
+                              <div class="">
                               <label><input name="immunotherapy" type="checkbox" value="">Immunotherapy</label>
                             </div>
-                            <div class="checkbox">
+                            <div class="">
                               <label><input name="targeted_therapy" type="checkbox" value="">Targeted Therapy</label>
                             </div>
-                            <div class="checkbox">
+                            <div class="">
                               <label><input name="stem_cell_therapy" type="checkbox" value="">Stem Cell Therapy</label>
                             </div>
                         </div>
