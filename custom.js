@@ -246,6 +246,12 @@ app.controller("myCntl",function($scope, $http){
 });
 
 
+app.controller("NewController", function($scope, $http){
+    $http.get(URL).success(function(response){
+       $scope.current = respose.data; 
+    });
+});
+
 /*
 0. Treatment
 1. Age

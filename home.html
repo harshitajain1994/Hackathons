@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="beStrong">
+<html lang="en" ng-app="myApp">
 <head>
   <title>Home</title>
   <meta charset="utf-8">
@@ -123,27 +123,7 @@
     }
   </style>
 </head>
-<body  ng-controller = "">
-
-<nav class="navbar ">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Logo</a>
-    </div>
-    <!-- <div class="collapse navbar-collapse" id="myNavbar"> -->
-      <ul class="nav nav-tabs nav-justified">
-         <li class="active"><a data-toggle="tab" href="#Users">Dashboard</a></li>
-         <li><a data-toggle="tab" href="#reports">Reports</a></li>
-         <li><a data-toggle="tab" href="#people">People</a></li>
-         <li><a data-toggle="tab" href="#clinical_tests">Clinical Tests</a></li>
-      </ul>
-  </div>
-</nav>
+<body  ng-controller = "NewController">
 
 <div class="container-fluid text-center">
   <div class="tab-content" id="tabContent">
@@ -163,10 +143,59 @@
             <p>OCCUPATION : {{current.occupation}}</p>
             <p>{{current.role}}</p>
         </div>
-        <div class="col-sm-6 text-left">
+        <div class="col-sm-6 col-md=6 text-left">
           <h2>Timeline data</h2>
-        </div>
-        <div class="col-sm-3 sidenav" >
+        
+          
+              <p>
+                1. <i>How did you feel when you were diagnosed with cancer?</i>
+              </p>
+                <p>
+                    After noticing some blood in my stools, I was diagnosed with hemorrhoids by my local physician. I have a family history of colon cancer, and this problem made me wonder if I might be suffering from the same disease. I had no pain but I suspected something more than hemorrhoids was causing the problem. I was 38 years old at the time, and my wife, Keisha, and I had two young children.
+
+                    I followed my instinct and scheduled a colonoscopy, which revealed a polyp that was positive for cancer. I was referred to a local surgeon in Atlanta. This surgeon tried to remove the polyp with minimally invasive surgery, but during the procedure, the surgeon noticed that the cancer was deeper than previously suspected. Also, it had spread to my lymph nodes. 
+
+                    I decided to seek a second opinion. There were no local CTCA facilities at the time but I called the location outside Chicago and traveled there for a consultation. The staff there made all our arrangements. Keisha and I flew there with our daughter, we were picked up at the airport, and hotel accommodations were made for the week we spent there meeting with different doctors and having tests done.
+
+                    The timing worked out well for us because the CTCA facility outside Atlanta was opening up. So after our experience with getting a second opinion, I decided to pursue treatment at CTCA—at the new facility that was just a short drive from our house.
+                </p>
+              
+              <p>
+                2. <i>What and how did you feel about the treatment?</i>
+              </p>
+              
+                <p>
+                    After surgery, my treatment has consisted of chemotherapy and radiation. I took Xeloda at first, and now I am taking a combination of Xeloda and oxaliplatin.
+
+                    The medications cause fatigue and sensitivity to cold. My care team at CTCA prepared me for these side effects. They took away my gelato when I first started treatment because they knew it would be painful for me to eat something that cold. The sensitivity lasts for a week or two after each treatment. Other side effects have also been addressed by my care team. My naturopathic clinician and dietitian recommended B complex, glutamine, L-glutamine, supplementing my food intake with a protein shake, and making sure to eat fruits that would help keep my energy levels up, like bananas and berries.
+
+                    I was one of the first patients to be treated at Southeastern Regional Medical Center. It was really helpful to have the surgeon and radiation oncologist in the room at the same time discussing my treatment. The team has gone out of its way to provide the best care possible. The radiation team stayed late when I needed it, and everyone arranged their schedule around mine. My doctors took whatever time was needed to answer whatever questions Keisha and I had about my treatment and recovery.
+
+                    With this support, and the support and amazing care that Keisha has given me, I have been able to continue working. No one at my workplace even knew I had cancer while I was going through chemotherapy and radiation. When I was about to undergo surgery, I let my coworkers know. They were so inspired by my ability to continue working while I was coping with treatment.
+                </p>
+                
+              <p>
+                3. <i>How is it impacting with your work life?</i>
+              </p>
+            
+                <p>
+                    I work in customer service, and am well aware that this aspect of a business makes all the difference. It matters how a customer is treated. Every hospital where cancer is treated offers chemotherapy, but the way in which patients are treated—not just the cancer—can have a significant impact on well-being and recovery. Having a nutritionist and a naturopath on your care team also matters. You may not take advantage of these services, but they are available at CTCA if you want them.
+                </p>
+              
+              <p>
+                4. <i>Whatis your daily routine?</i>
+              </p>
+                <p>
+                    It’s been many years now since I was diagnosed with colon cancer. I return to CTCA every year for follow-up visits. Since that surprising news many years ago, I have watched three grandchildren come into the world and one of my two children get married. Elsie and I celebrated our 36th wedding anniversary.
+
+                    I am retired, but remain as active as possible. I do administrative work for a missions team and I help Elsie with some of her endeavors. Above all, I have time with my family, which kept me motivated during my treatment and still does today.
+
+                    Looking back, I think our insistence on knowing our options was vital. We don’t have to listen to the first voice we hear. We can get as much information as we need in order to make a decision about our health care. They say that knowledge is power, and when it comes to cancer treatment that is absolutely true. After all, Elsie’s insistence on finding out more brought us to CTCA. I am deeply thankful for my committed spouse, family, and the care by the wonderful folks at ERMC.
+                </p>
+              
+              
+              </div>
+        <div class="col-sm-3 col-sm-3 sidenav" >
             <div class="thumbnail" >
               <img src="http://blog.ramboll.com/fehmarnbelt/wp-content/themes/ramboll2/images/profile-img.jpg" alt="" style="width: 100%; height: 100%;">
               <div class="caption">
@@ -242,10 +271,10 @@
     </div>
   </div>
 </div>
+<script src="custom.js" />
 
 <!-- <footer class="container-fluid text-center">
   <p>Footer Text</p>
 </footer> -->
-
 </body>
 </html>
